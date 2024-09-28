@@ -1,0 +1,124 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('path/to/your/field-image.jpg') no-repeat center center fixed; /* Background image */
+    background-size: cover; /* Cover the entire background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for readability */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ethical-threads {
+    background-color: rgba(46, 204, 113, 0.9); /* A vibrant green with slight transparency */
+    color: white;
+    padding: 40px; /* Increased padding for a larger section */
+    border-radius: 12px; /* Slightly more rounded corners */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow for more depth */
+    margin: 30px 0; /* Added margin for separation */
+    text-align: center; /* Center text */
+    font-size: 1.5em; /* Increased font size */
+}
+
+.ethical-threads h2 {
+    font-size: 2.5em; /* Larger font size for the title */
+    font-weight: bold; /* Bold text */
+}
+
+.ethical-threads h3 {
+    font-size: 2em; /* Slightly larger subtitle */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input, form select, form button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus, form select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    outline: none;
+}
+
+form button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.2s;
+}
+
+a:hover {
+    color: #2980b9;
+    transform: scale(1.05);
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    form input, form select, form button {
+        width: 100%;
+    }
+}
+
+.ethical-threads-section {
+    background-color: rgba(46, 204, 113, 0.8); /* Green background for eco-friendliness */
+    color: white;
+    padding: 40px; /* Generous padding */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    margin: 30px 0; /* Space above and below */
+    text-align: center; /* Center text */
+}
+
+.ethical-threads-section h2 {
+    font-size: 2.5em; /* Large title */
+    margin-bottom: 15px; /* Space below the title */
+}
+
+.ethical-threads-section h3 {
+    font-size: 2em; /* Subtitle */
+    margin-bottom: 10px; /* Space below the subtitle */
+}
