@@ -41,7 +41,7 @@
 }
 
 .navbar-toggle {
-    display: none; /* Hidden by default */
+    display: none; 
     background: none;
     border: none;
     color: white;
@@ -98,21 +98,21 @@
 
 @media (max-width: 768px) {
     .navbar-menu {
-        display: none; /* Hide the menu by default */
-        flex-direction: column; /* Stack items */
+        display: none; 
+        flex-direction: column; 
         position: absolute;
-        top: 59px; /* Below the navbar */
+        top: 59px; 
         left: 0;
         background-color: black;
         width: 100%;
     }
 
     .navbar-menu.active {
-        display: flex; /* Show the menu when active */
+        display: flex; 
     }
 
     .navbar-toggle {
-        display: block; /* Show toggle button on mobile */
+        display: block; 
     }
 }
 #home{
