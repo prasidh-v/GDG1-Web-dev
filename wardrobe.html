@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Wardrobe</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>My Wardrobe</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/wardrobe">My Wardrobe</a></li>
+          <li><a href="/community">Community Exchange</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      <h2>Items in Your Wardrobe</h2>
+      <ul>
+        {% for item in items %}
+        <li>
+          {{ item.name }} - Category: {{ item.category }} (Used {{
+          item.usage_count }} times)
+        </li>
+        {% endfor %}
+      </ul>
+
+      <h2>Add a New Item</h2>
+      <form action="/add" method="POST">
+        <input type="text" name="name" placeholder="Item name" required />
+        <input type="text" name="category" placeholder="Category" required />
+        <button type="submit">Add Item</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Wardrobe Manager</p>
+    </footer>
+  </body>
+</html>

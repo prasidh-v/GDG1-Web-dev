@@ -21,3 +21,8 @@ window.addEventListener('scroll', function() {
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
 });
 
+// script.js
+
+document.getElementById('open').addEventListener('click', function() {
+    window.location.href = 'wardrobe.html'; // Change 'newpage.html' to the URL of the page you want to open
+});
