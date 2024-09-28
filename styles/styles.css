@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root{
@@ -10,7 +11,10 @@
 #navbar{
     display: flex;
     align-items: center;
+    height: 50px;
 }
+
+
 #navbar::before{
     content: "";
     background-color: black;
@@ -18,21 +22,66 @@
     height: 100%;
     width: 100%;
     z-index: -1;
-    opacity: 0.4;
+    justify-content: space-between;
+    /* opacity: 0.4; */
 }
 
 #navbar{
-    position: relative;
+    position: fixed;
+    width: 100%;
+    z-index: 1000%;
+    transition: transform 0.3s ease;
+}
+
+#navbar.hidden{
+    transform: translateY(-100%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.navbar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#navbar-menu {
+    display: flex;
+    list-style: none;
+}
+
+#navbar-menu li {
+    margin: 0 10px;
+}
+
+#navbar-menu a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
 }
 
 #navbar ul{
     display: flex;
+    margin: auto;
+    list-style: none;
 }
 
 #navbar ul li{
     list-style: none;
     font-size: 1.3rem;
     font-family: "Merriweather", serif;
+    margin: 0 10px;
 }
 
 #navbar ul li a{
@@ -47,11 +96,30 @@
     background-color: white;
 }
 
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none; 
+        flex-direction: column; 
+        position: absolute;
+        top: 59px; 
+        left: 0;
+        background-color: black;
+        width: 100%;
+    }
+
+    .navbar-menu.active {
+        display: flex; 
+    }
+
+    .navbar-toggle {
+        display: block; 
+    }
+}
 #home{
     display: flex;
     flex-direction: column;
     padding: 3px 200px;
-    height: 582px;
+    height: 642px;
     justify-content: center;
     align-items: center;
 }
@@ -76,10 +144,19 @@
     font-size: 1.3rem;
     font-family: "Merriweather", serif;
 }
+
+
 .h-primary{
     font-size: 3.8rem;
     padding: 12px   ;
 }
+
+.h-secondary{
+    font-size: 2.8rem;
+    padding: 12px   ;
+}
+
+
 
 .btn{
     padding: 6px 20px;
@@ -90,4 +167,36 @@
     font-size: 1.5rem;
     border-radius: 20px;
     cursor: pointer;
+}
+
+.center{
+    text-align: center;
+}
+
+#cat {
+    margin: 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cat .box img{
+    height: auto;
+    border-radius: 18px;
+    float: center;
+    margin-right: 10px;
+    position: relative;
+    margin-top: var(--navbar-height);
+}
+
+#cat p{
+    color: black;
+    text-align: center;
+    font-size: 1.7rem;
+
+}
+
+.categories-container {
+    padding: 20px; 
+    margin-top: 30px;
 }
