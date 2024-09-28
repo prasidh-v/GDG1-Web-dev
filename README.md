@@ -1,1 +1,1 @@
-#Making a website managing clothing
+Making a website for managing clothing
