@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Wardrobe Organizer</h1>
+
+        <h2>Add Clothing Item</h2>
+        <form action="/home" method="POST" enctype="multipart/form-data">
+            <label for="category">Category:</label>
+            <select name="category" required>
+                <option value="Top Wear">Top Wear</option>
+                <option value="Bottom Wear">Bottom Wear</option>
+                <option value="Foot Wear">Foot Wear</option>
+            </select>
+
+            <label for="clothing_type">Clothing Type:</label>
+            <select name="clothing_type" required>
+                <option value="Formal">Formal</option>
+                <option value="Informal">Informal</option>
+            </select>
+
+            <label for="material">Material:</label>
+            <input type="text" name="material" required>
+
+            <label for="description">Description:</label>
+            <input type="text" name="description">
+
+            <label for="image">Upload Image:</label>
+            <input type="file" name="image">
+
+            <button type="submit">Add Clothing</button>
+        </form>
+
+        <h2>Outfit Recommendations</h2>
+        <h3>Formal Outfit</h3>
+        {% if formal_outfit %}
+            <ul>
+                {% for item in formal_outfit %}
+                    <li>{{ item['category'] }} - {{ item['material'] }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No formal outfits available.</p>
+        {% endif %}
+
+        <h3>Informal Outfit</h3>
+        {% if informal_outfit %}
+            <ul>
+                {% for item in informal_outfit %}
+                    <li>{{ item['category'] }} - {{ item['material'] }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No informal outfits available.</p>
+        {% endif %}
+
+        <a href="/ethical_threads">Ethical Threads</a>
+    </div>
+</body>
+</html>
