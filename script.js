@@ -23,6 +23,31 @@ window.addEventListener('scroll', function() {
 
 // script.js
 
-document.getElementById('open').addEventListener('click', function() {
-    window.location.href = 'wardrobe.html'; // Change 'newpage.html' to the URL of the page you want to open
+document.getElementById('op').addEventListener('click', function() {
+    window.location.href = 'templates/signup.html'; 
 });
+
+document.getElementById('open').addEventListener('click', function() {
+    window.location.href = 'cat.html'; 
+});
+
+document.getElementById('ope').addEventListener('click', function() {
+    window.location.href = 'templates/login.html'; 
+});
+
+document.getElementById('vie').addEventListener('click', function() {
+    window.location.href = 'cat.html'; 
+});
+
+document.getElementById('com').addEventListener('click', function() {
+    window.location.href = 'templates/ethical_threads.html'; 
+});
+
+document.getElementById('sus').addEventListener('click', function() {
+    window.location.href = 'sus.html'; 
+});
+
+
+
+
+

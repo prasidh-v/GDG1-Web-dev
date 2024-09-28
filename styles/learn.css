@@ -1,0 +1,160 @@
+body {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #2c3e50;
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+#khadi-sustainability {
+    background-color: cream;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#khadi-sustainability h2 {
+    font-size: 24px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+#khadi-sustainability .interactive-boxes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+#khadi-sustainability .box {
+    background-color: #e7f3fe;
+    border: 1px solid #b3d4fc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+    transition: transform 0.3s;
+}
+
+#khadi-sustainability .box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+#khadi-sustainability table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#khadi-sustainability table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    transition: background-color 0.3s;
+}
+
+#khadi-sustainability table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+#khadi-sustainability table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light grey for even rows */
+}
+
+#khadi-sustainability table tr:hover {
+    background-color: #d1e8ff; /* Highlighted row on hover */
+}
+
+#khadi-sustainability ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+.circular-links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.circular-links a {
+    background-color: #e7f3fe;
+    border: 2px solid #b3d4fc;
+    border-radius: 50%; /* Makes the links circular */
+    padding: 20px; /* Size of the circular box */
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s;
+    width: 80px; /* Width of the circular box */
+    height: 80px; /* Height of the circular box */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circular-links a:hover {
+    transform: scale(1.1);
+    background-color: #b3d4fc; /* Change background on hover */
+}
+
+footer {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #khadi-sustainability .interactive-boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #khadi-sustainability .box {
+        width: 80%; /* Width for smaller screens */
+    }
+
+    #khadi-sustainability table {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .circular-links {
+        flex-direction: column; /* Stack links vertically on smaller screens */
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    #khadi-sustainability h2 {
+        font-size: 20px; /* Smaller heading size for mobile */
+    }
+
+    .circular-links a {
+        width: 60px; /* Adjust circular box size for mobile */
+        height: 60px;
+        padding: 15px; /* Adjust padding for mobile */
+    }
+}

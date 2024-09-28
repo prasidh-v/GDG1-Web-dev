@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wardrobe Analytics</title>
+    <link rel="stylesheet" href="styles/analytics.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Wardrobe Analytics</h1>
+
+      {% if most_frequent %}
+      <div class="item-card most-frequent">
+        <h2>Most Frequently Worn Item</h2>
+        <p><strong>Category:</strong> {{ most_frequent.category }}</p>
+        <p><strong>Type:</strong> {{ most_frequent.clothing_type }}</p>
+        <p><strong>Description:</strong> {{ most_frequent.description }}</p>
+        <p><strong>Material:</strong> {{ most_frequent.material }}</p>
+        <p><strong>Years Owned:</strong> {{ most_frequent_years }} years</p>
+        <img
+          src="{{ url_for('static', filename='uploads/' + most_frequent.image_filename) }}"
+          alt="Most frequently worn item"
+          class="item-image"
+        />
+      </div>
+      {% endif %} {% if least_frequent %}
+      <div class="item-card least-frequent">
+        <h2>Least Frequently Worn Item</h2>
+        <p><strong>Category:</strong> {{ least_frequent.category }}</p>
+        <p><strong>Type:</strong> {{ least_frequent.clothing_type }}</p>
+        <p><strong>Description:</strong> {{ least_frequent.description }}</p>
+        <p><strong>Material:</strong> {{ least_frequent.material }}</p>
+        <p><strong>Years Owned:</strong> {{ least_frequent_years }} years</p>
+        <img
+          src="{{ url_for('static', filename='uploads/' + least_frequent.image_filename) }}"
+          alt="Least frequently worn item"
+          class="item-image"
+        />
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wardrobe Tracker</title>
+    <link rel="stylesheet" href="styles/involve.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Merriweather:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Track Your Wardrobe</h1>
+      <p>
+        Keep track of how often you wear your clothes and make smarter choices!
+      </p>
+      <button class="cta-button" id="openForm">Log Wear</button>
+    </header>
+
+    <main>
+      <section class="content">
+        <h2>Why Track Your Wardrobe?</h2>
+        <p>
+          Understanding your clothing habits can help you make the most of your
+          wardrobe. Discover trends, identify favorites, and reduce waste.
+        </p>
+
+        <div class="tracker">
+          <h3>Your Clothing Log</h3>
+          <ul id="clothingList"></ul>
+        </div>
+
+        <button class="cta-button" id="viewTrends">
+          <a href="analytics.html">View trends</a>
+        </button>
+      </section>
+    </main>
+
+    <div class="modal" id="logFormModal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h2>Log Your Wear</h2>
+        <input
+          type="text"
+          id="clothingItem"
+          placeholder="Enter clothing item name"
+        />
+        <input type="date" id="wearDate" />
+        <button id="saveLog">Save Log</button>
+      </div>
+    </div>
+
+    <footer>
+      <p>Join us in making sustainable fashion choices. Every wear counts!</p>
+    </footer>
+
+    <script>
+      document.getElementById("openForm").onclick = function () {
+        document.getElementById("logFormModal").style.display = "block";
+      };
+
+      document.getElementById("closeModal").onclick = function () {
+        document.getElementById("logFormModal").style.display = "none";
+      };
+
+      document.getElementById("saveLog").onclick = function () {
+        const clothingItem = document.getElementById("clothingItem").value;
+        const wearDate = document.getElementById("wearDate").value;
+
+        if (clothingItem && wearDate) {
+          const listItem = document.createElement("li");
+          listItem.textContent = `${clothingItem} - Worn on: ${wearDate}`;
+          document.getElementById("clothingList").appendChild(listItem);
+
+          document.getElementById("clothingItem").value = "";
+          document.getElementById("wearDate").value = "";
+          document.getElementById("logFormModal").style.display = "none";
+        } else {
+          alert("Please fill out both fields.");
+        }
+      };
+    </script>
+  </body>
+</html>

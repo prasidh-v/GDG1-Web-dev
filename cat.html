@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green Stitch</title>
+    <link rel="stylesheet" href="styles/cat.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Merriweather:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <nav id="navbar">
+      <h1 class="logo">Green Stitch</h1>
+      <div class="navbar-right">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search clothes..."
+          class="search-bar"
+        />
+        <button class="btn-add" id="btn-add">Add Clothes</button>
+      </div>
+    </nav>
+
+    <section id="clothing-section">
+      <h2 class="section-title">Top Wear</h2>
+      <div class="clothes-container" id="top-wear"></div>
+
+      <h2 class="section-title">Bottom Wear</h2>
+      <div class="clothes-container" id="bottom-wear"></div>
+
+      <h2 class="section-title">Footwear</h2>
+      <div class="clothes-container" id="footwear"></div>
+
+      <h2 class="section-title">Accessories</h2>
+      <div class="clothes-container" id="accessories"></div>
+    </section>
+
+    <div class="modal" id="addClothesModal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h2>Add New Clothes</h2>
+        <input
+          type="text"
+          id="clothingTitle"
+          placeholder="Enter clothing title"
+        />
+        <select id="clothingType">
+          <option value="top-wear">Top Wear</option>
+          <option value="bottom-wear">Bottom Wear</option>
+          <option value="footwear">Footwear</option>
+          <option value="accessories">Accessories</option>
+        </select>
+        <input type="file" id="clothingImage" accept="image/*" />
+        <button id="saveClothing">Save</button>
+      </div>
+    </div>
+
+    <script src="message.js"></script>
+  </body>
+</html>
