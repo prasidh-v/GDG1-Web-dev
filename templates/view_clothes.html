@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Wardrobe</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>My Clothes</h1>
 
     <h2>Top Wear</h2>
     <ul>
-        {% for cloth in top_wear %}
-            <li>{{ cloth.description }} ({{ cloth.clothing_type }})
-                {% if cloth.image_filename %}
-                    <img src="/static/uploads/{{ cloth.image_filename }}" width="100">
-                {% endif %}
-            </li>
-        {% endfor %}
+      {% for cloth in top_wear %}
+      <li>
+        {{ cloth.description }} ({{ cloth.clothing_type }}) {% if
+        cloth.image_filename %}
+        <img src="/static/uploads/{{ cloth.image_filename }}" width="100" />
+        {% endif %}
+      </li>
+      {% endfor %}
     </ul>
 
     <h2>Bottom Wear</h2>
     <ul>
-        {% for cloth in bottom_wear %}
-            <li>{{ cloth.description }} ({{ cloth.clothing_type }})
-                {% if cloth.image_filename %}
-                    <img src="/static/uploads/{{ cloth.image_filename }}" width="100">
-                {% endif %}
-            </li>
-        {% endfor %}
+      {% for cloth in bottom_wear %}
+      <li>
+        {{ cloth.description }} ({{ cloth.clothing_type }}) {% if
+        cloth.image_filename %}
+        <img src="/static/uploads/{{ cloth.image_filename }}" width="100" />
+        {% endif %}
+      </li>
+      {% endfor %}
     </ul>
 
     <h2>Footwear</h2>
     <ul>
-        {% for cloth in footwear %}
-            <li>{{ cloth.description }} ({{ cloth.clothing_type }})
-                {% if cloth.image_filename %}
-                    <img src="/static/uploads/{{ cloth.image_filename }}" width="100">
-                {% endif %}
-            </li>
-        {% endfor %}
+      {% for cloth in footwear %}
+      <li>
+        {{ cloth.description }} ({{ cloth.clothing_type }}) {% if
+        cloth.image_filename %}
+        <img src="/static/uploads/{{ cloth.image_filename }}" width="100" />
+        {% endif %}
+      </li>
+      {% endfor %}
     </ul>
+    <h2></h2>
 
-    <br><br>
+    <br /><br />
     <a href="/">Back to Home</a>
     <script src="/static/js/script.js"></script>
-</body>
+  </body>
 </html>
